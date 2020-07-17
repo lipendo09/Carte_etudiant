@@ -48,6 +48,6 @@ Route::get('/admin_pages/pages/edit', function () {
 
 Route::get('admin_pages/pages/icon-material','EtudiantController@liste');
 
-Route::get('/customers/pdf','pdfController@export_pdf');
 
+Route::get('/customers/pdf','pdfController@export_pdf');
 

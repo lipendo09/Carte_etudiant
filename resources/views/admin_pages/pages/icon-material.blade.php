@@ -39,9 +39,10 @@
                                                 <td>{{$etudiant->nom}}</td>
                                                 <td>{{$etudiant->prenom}}</td>
                                                 <td>{{$etudiant->email}}</td>
-                                            {{-- <td>{{$etudiant->etudiant_cycle}}</td> --}}
+                                            {{-- <td>{{$etudiant->etudiant_cycle}}</td> 
+                                            --}}
                                                 
-                                          
+
                 <div class="card rounded text-center mb-5 font-weight-bolder shadow ">
                     
                      <a href="{{url('/customers/pdf')}}" class="ml-auto p-2 bd-highlight bg-success btn btn-secondary ml-2">Convert into PDF</a>
@@ -80,12 +81,15 @@
                                 </div>
                                 {{-- <div class="text-center">
                                     <p class="card-text text-dark font-italic">{{$etudiant->duree}}</p>
-                                </div> --}}
+                                </div> 
+ 
+
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
+
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
