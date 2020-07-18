@@ -16,14 +16,17 @@ class filiereTableSeeder extends Seeder
             [
                 'idfiliere' => 1,
                 'nom' => 'Maintenance',
+                'numMatricule'=>'1',
             ],
             [
                 'idfiliere' => 2,
                 'nom' => 'Developpement Web',
+                'numMatricule'=>'2',
             ],
             [
                 'idfiliere' => 3,
-                'nom' => 'Securite Informatique'
+                'nom' => 'Securite Informatique',
+                'numMatricule'=>'3',
             ],
     
         ]);

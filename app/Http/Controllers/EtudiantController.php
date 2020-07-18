@@ -103,8 +103,8 @@ class EtudiantController extends Controller
         $etudiant->dateDeNaissance = $request->get('dateDeNaissance');
         $etudiant->adresse = $request->get('adresse');
         $etudiant->email = $request->get('email');
-        $image->photo = $image->$etudiant['photo'];
-       
+        // $etudiant->photo = $image->$etudiant['photo'];
+        $etudiant->photo = $request->photo->store('public/images');
         $etudiant->idcycle = $request->get('idcycle');
         $etudiant->idniveau = $request->get('idniveau');
         $etudiant->idannee = $request->get('idannee');

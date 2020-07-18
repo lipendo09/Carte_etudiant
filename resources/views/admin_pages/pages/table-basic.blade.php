@@ -39,6 +39,7 @@
     Enregistrer un etudiant
   </button>
   
+  
   <!-- Modal -->
   <div class="modal fade" id="exampleModal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -143,19 +144,25 @@
   </div>
                             
                         </div>
+                        
                         <div class="card">
+                                
                             <div class="card-block">
                                 <h4 class="card-title">Liste des etudiants</h4>
-                                
+                                <div style="margin-left:0%; font-weight:800;"> <button onClick="imprimer('sectionAimprimer')" class="btn btn-primary">Imprimer</button></div> <br>
+                                <div id='sectionAimprimer'>
                                 <div class="table-responsive">
                                     <table class="table">
+                            
                                         <thead>
                                             <tr>
                                                 <th>Matricule</th>
                                                 <th>Nom</th>
                                                 <th>Prenom</th>
                                                 <th>E-mail</th>
-                                                {{-- <th>Cycle</th> --}}
+                                                <th>Cycle</th>
+                                                <th>Niveau</th>
+                                                <th>Filiere</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -166,7 +173,9 @@
                                                 <td>{{$etudiant->nom}}</td>
                                                 <td>{{$etudiant->prenom}}</td>
                                                 <td>{{$etudiant->email}}</td>
-                                            {{-- <td>{{$etudiant->etudiant_cycle}}</td> --}}
+                                            <td>{{$etudiant->etudiant_cycle->nom}}</td>
+                                            <td>{{$etudiant->etudiant_niveau->niveau}}</td>
+                                            <td>{{$etudiant->etudiant_filiere->nom}}</td>
                                                 <td style="display:inline-flex; flex-direction:row; justify-content:space-around;">
                                                     <a href="{{ route('edit.edit', $etudiant->numMatricule)}}"><button class="btn btn-warning" style="margin-right:5%;">Modifier</button></a>
                                                     <form action="{{ route('table-basic.destroy', $etudiant->numMatricule)}}" method="post">
@@ -182,6 +191,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -213,6 +223,40 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     @include('admin_pages/layouts/js')
+    <script>
+        function myFunction() {
+      // Declare variables
+      var inpute, filter, tbody, tr, td, i, nom;
+      inpute = document.getElementById('search');
+      filter = inpute.value.toUpperCase();
+     tbody= document.getElementById("tbody");
+      tr = tbody.getElementsByTagName('tr');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        
+        td = tr[i].getElementsByTagName("nom")[1];
+        nom=td.textContent || td.innerText;
+        // var reg1=new regExtxtValue
+        if (nom.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none"; 
+        }
+      }
+    }
+    
+        </script>
+    
+    <script>
+    function imprimer(divName) {
+          var printContents = document.getElementById(divName).innerHTML;    
+       var originalContents = document.body.innerHTML;      
+       document.body.innerHTML = printContents;     
+       window.print();     
+       document.body.innerHTML = originalContents;
+       }
+    </script>
 </body>
 
 </html>
