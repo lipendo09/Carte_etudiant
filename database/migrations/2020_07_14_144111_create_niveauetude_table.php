@@ -10,6 +10,7 @@ class CreateNiveauetudeTable extends Migration {
 		Schema::create('niveauetude', function(Blueprint $table) {
 			$table->increments('idniveau', true);
 			$table->string('niveau');
+			$table->integer('numMatricule');
 			
 		});
 	}
