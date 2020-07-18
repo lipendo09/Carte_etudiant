@@ -111,7 +111,9 @@
                         </li>
                     <li> <a class="waves-effect waves-dark" href="{{route('table-basic.index')}}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Liste des etudiants</span></a>
                         </li>
+
                     <li> <a class="waves-effect waves-dark" href="{{URL('admin_pages/pages/icon-material')}}"  aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Carte des Etudiants</span></a>
+
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gmail"></i><span class="hide-menu">E-mail</span></a>
                         </li>
