@@ -10,10 +10,8 @@ class CreateCycleTable extends Migration {
 		Schema::create('cycle', function(Blueprint $table) {
 			$table->increments('idcycle',true);
 			$table->string('nom');
-			$table->integer('numMatricule');
 			
-			// $table->integer('numMatricule')->length(10)->unsigned();
-			// $table->foreign('numMatricule')->references('numMatricule')->on('etudiant');
+			
 		});
 	}
 

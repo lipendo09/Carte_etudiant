@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace email;
 
 use Illuminate\Database\Eloquent\Model;
 

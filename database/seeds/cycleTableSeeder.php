@@ -17,16 +17,15 @@ class cycleTableSeeder extends Seeder
         [
             'idcycle' => 1,
             'nom' => 'Licence',
-            'numMatricule'=>'1',
         ],
         [
             'idcycle' => 2,
             'nom' => 'Master',
-            'numMatricule'=>'2',        ],
+        ],
         [
             'idcycle' => 3,
             'nom' => 'Doctorat',
-            'numMatricule'=>'3',        ],
+        ],
 
     ]);
     }

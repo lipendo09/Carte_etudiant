@@ -16,17 +16,14 @@ class niveauetudeTableSeeder extends Seeder
             [
                 'idniveau' => 1,
                 'niveau' => '1ere annee',
-                'numMatricule'=>'1',
             ],
             [
                 'idcycle' => 2,
                 'niveau' => '2eme annee',
-                'numMatricule'=>'2',
             ],
             [
                 'idcycle' => 3,
                 'niveau' => '3eme annee',
-                'numMatricule'=>'3',
             ],
     
         ]);

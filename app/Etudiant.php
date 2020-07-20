@@ -27,12 +27,12 @@ class Etudiant extends Model
 
     public function etudiant_niveau()
     {
-        return $this->belongsTo(Niveau::class,'idniveau', 'numMatricule');
+        return $this->belongsTo('App\Etudiant', 'idcycle' ,'idniveau','idannee','idfiliere','idtuteur');
     }
 
     public function etudiant_filiere()
     {
-        return $this->belongsTo(Filiere::class,'idfiliere', 'numMatricule');
+        return $this->belongsTo('App\Etudiant','idcycle' ,'idniveau','idannee','idfiliere','idtuteur');
     }
 
     public function etudiant_email()

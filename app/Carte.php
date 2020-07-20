@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace carte;
 
 use Illuminate\Database\Eloquent\Model;
 

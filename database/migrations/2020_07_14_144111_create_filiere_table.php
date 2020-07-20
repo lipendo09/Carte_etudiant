@@ -10,7 +10,6 @@ class CreateFiliereTable extends Migration {
 		Schema::create('filiere', function(Blueprint $table) {
 			$table->increments('idfiliere',true);
 			$table->string('nom');
-			$table->integer('numMatricule');
 			
 		});
 	}

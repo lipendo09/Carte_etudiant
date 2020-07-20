@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace niveau;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,11 +9,14 @@ class Niveau extends Model
 
     protected $table = 'niveauetude';
     public $timestamps = false;
-    protected $primaryKey = 'idniveau';
+    protected $fillable = [
+        'nom', 'prenom','dateDeNaissance','dateDeNaissance','adresse','idemail'
+        ,'idtuteur','idniveau','idannee','idcycle','email'
+    ];
 
     public function niveau_etudiant()
     {
-        return $this->hasMany(Niveau::class,'idniveau' ,'numMatricule');
+        return $this->hasMany('App\niveau', 'numMatricule');
     }
 
 }
