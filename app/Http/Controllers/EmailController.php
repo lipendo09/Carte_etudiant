@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\mail\SendMail;
+use App\Etudiant;
+
 
 class EmailController extends Controller 
 {
@@ -14,9 +18,19 @@ class EmailController extends Controller
    */
   public function index()
   {
-    
+    return view('admin_pages/pages/email');
   }
 
+  public function send(Request $request)
+  {
+    $data= array(
+    'nom'=> $request->nom,
+    'message'=> $request->message,
+    'email'=>$request->email
+);
+    Mail::to('sidikiouedraogo2000@gmail.com')->send(new Sendmail($data));
+    return back();
+  }
   /**
    * Show the form for creating a new resource.
    *
@@ -24,7 +38,7 @@ class EmailController extends Controller
    */
   public function create()
   {
-    
+    return view('admin_pages/pages/email');
   }
 
   /**
@@ -32,10 +46,12 @@ class EmailController extends Controller
    *
    * @return Response
    */
-  public function store(Request $request)
-  {
-    
-  }
+  // public function store(EmailRequest $request)
+  // {
+  //   Mail::to('administrateur@moi.com')
+  //   ->send(new SendMail ($request->except('_token')));
+  //   return view('admin_pages/pages/email');
+  // }
 
   /**
    * Display the specified resource.
@@ -56,7 +72,9 @@ class EmailController extends Controller
    */
   public function edit($id)
   {
-    
+    $etudiant = Etudiant::find($id);
+   
+    return view('admin_pages/pages/email', compact('etudiant'));
   }
 
   /**

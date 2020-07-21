@@ -1,11 +1,17 @@
 <?php
 
 namespace App\Providers;
+use Route;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
+
+use Illuminate\Routing\Router;
+
 
 class AppServiceProvider extends ServiceProvider
 {
+    protected $namespace = 'App\Http\Controllers';
     /**
      * Register any application services.
      *
@@ -21,8 +27,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-    }
+    // public function boot()
+    // {
+    //     URL::forceSchema('https');
+    // }
 }

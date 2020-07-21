@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>Gestion des cartes UNB-ESI</title>
     <!-- Bootstrap Core CSS -->
     {{-- <link href="asset/plugins/bootstrap/css/bootstrap.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ URL::asset('bootstrap.css') }}">
@@ -115,8 +115,8 @@
                     <li> <a class="waves-effect waves-dark" href="{{URL('admin_pages/pages/icon-material')}}"  aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Carte des Etudiants</span></a>
 
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gmail"></i><span class="hide-menu">E-mail</span></a>
-                        </li>
+                        {{-- <li> <a class="waves-effect waves-dark" href="" aria-expanded="false"><i class="mdi mdi-gmail"></i><span class="hide-menu">E-mail</span></a>
+                        </li> --}}
                        
                     </ul>
                     
