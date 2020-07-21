@@ -45,6 +45,11 @@ Route::resource('admin_pages/pages/edit', 'etudiantController');
 Route::get('/admin_pages/pages/edit', function () {
     return view('admin_pages/pages/edit');
 });
+Route::get('/admin_pages/pages/email', 'EmailController@index');
+
+Route::post('/admin_pages/pages/email/send', 'EmailController@send');
+Route::resource('/admin_pages/pages/email', 'EmailController');
+
 
 Route::get('admin_pages/pages/icon-material','EtudiantController@liste');
 
