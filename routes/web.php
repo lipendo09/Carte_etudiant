@@ -56,3 +56,7 @@ Route::get('admin_pages/pages/icon-material','EtudiantController@liste');
 
 Route::get('/customers/pdf','pdfController@export_pdf');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
